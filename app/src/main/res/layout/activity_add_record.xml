@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:orientation="vertical"
+    android:background="#f2f2f2">
+
+    <TextView
+        android:id="@+id/txtVwChildPreferredName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:hint="Child Name"
+        android:textStyle="bold"
+        android:textSize="60sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtInBehaviourCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwChildPreferredName"
+        android:layout_marginTop="20dp"
+        android:hint="Behaviour Category"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/txtInBehaviourDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler_view_record_behaviours"
+        android:layout_marginTop="20dp"
+        android:hint="Behaviour Detail"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/txtInBehaviourCategory"
+        android:layout_marginTop="10dp"
+        android:id="@+id/recycler_view_record_behaviours"
+        android:orientation="horizontal">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    <SeekBar
+        android:id="@+id/skBrPointChange"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInBehaviourDetail"
+        android:layout_marginTop="35dp"
+        android:layout_alignParentRight="true"
+        android:min="-5"
+        android:max="5">
+
+    </SeekBar>
+
+    <TextView
+        android:id="@+id/txtVwPointChangeText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInBehaviourDetail"
+        android:layout_marginTop="20dp"
+        android:hint="-90"
+        android:autoSizeMinTextSize="20dp"
+        android:layout_alignParentLeft="true"
+        android:textSize="50sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtInParentName"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwPointChangeText"
+        android:layout_marginTop="20dp"
+        android:hint="Parent Name"
+        android:textSize="12sp">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/txtInBehaviourDate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwPointChangeText"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:editable="false"
+        android:layout_alignParentRight="true"
+        android:focusable="false"
+        android:hint="Behaviour Date"
+        android:textSize="20sp">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/txtVwRecordUpdate"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInParentName"
+        android:layout_marginTop="10dp"
+        android:hint="Record Update"
+        android:textSize="12sp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btnAddRecord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwRecordUpdate"
+        android:layout_marginTop="20dp"
+        android:text="Add Record">
+
+    </Button>
+
+
+
+
+</RelativeLayout>

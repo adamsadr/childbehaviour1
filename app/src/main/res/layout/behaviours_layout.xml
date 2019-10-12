@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:padding="6dip" >
+
+    <ImageView
+        android:id="@+id/icnBehaviours"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginRight="6dip"
+        android:contentDescription="TODO"
+        android:src="@drawable/behaviour" />
+
+    <TextView
+        android:id="@+id/txtVwBehaviourCategory"
+        android:layout_width="250dp"
+        android:layout_height="58dp"
+        android:layout_marginRight="6dip"
+        android:layout_toRightOf="@id/icnBehaviours"
+        android:gravity="center_vertical"
+        android:text="BehaviourCat"
+        android:textSize="30dp" />
+
+
+    <TextView
+        android:id="@+id/txtVwBehaviourGeneralDescription"
+        android:layout_width="250dp"
+        android:layout_height="118dp"
+        android:layout_below="@id/txtVwBehaviourCategory"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="6dip"
+        android:layout_toRightOf="@id/icnBehaviours"
+        android:gravity="center_vertical"
+        android:text="BehaviourGenDesc"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/txtVwBehaviourPointsLimit"
+        android:layout_width="165dp"
+        android:layout_height="58dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@id/txtVwBehaviourCategory"
+        android:text="50"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>

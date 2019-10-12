@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/btnAddBehaviour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sbAttributeType"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="Add Behaviour" />
+
+    <EditText
+        android:id="@+id/txtInBehaviourCategoryName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Category name"
+        android:inputType="textShortMessage"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/txtInBehaviourGeneralDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_below="@+id/txtInBehaviourCategoryName"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="General description"
+        android:inputType="textMultiLine" />
+
+    <TextView
+        android:id="@+id/txtVwPointLimit"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInBehaviourGeneralDescription"
+        android:layout_marginTop="20dp"
+        android:text="Point limit"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtVwPointLimitSeekBarProgress"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtInBehaviourGeneralDescription"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/skBrPointLimit"
+        android:text="50"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <SeekBar
+        android:id="@+id/skBrPointLimit"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="200dp"
+        android:layout_height="24dp"
+        android:layout_below="@+id/txtInBehaviourGeneralDescription"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/txtVwPointLimit"
+        android:layout_marginLeft="5dp"
+        android:max="10"
+        android:min="-10"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/txtVwPositiveAttribute"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtVwPointLimit"
+        android:layout_marginTop="20dp"
+        android:text="Positive attribute"
+        android:textSize="18sp" />
+
+    <Switch
+        android:id="@+id/sbAttributeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/skBrPointLimit"
+        android:layout_toEndOf="@id/txtVwPositiveAttribute"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:checked="true"
+        android:textOff="Negative"
+        android:textOn="Positive"/>
+
+
+</RelativeLayout>
